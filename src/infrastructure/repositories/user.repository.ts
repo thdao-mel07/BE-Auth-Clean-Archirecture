@@ -1,7 +1,4 @@
-// localhost
-//import { PrismaClient } from '../../../generated/prisma';
-// production
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '../../../generated/prisma';
 import { injectable } from 'tsyringe';
 import { IUserRepository } from '../../domain/repositories/user.repository';
 import { User, CreateUserDTO } from '../../domain/entities/user.entity';
