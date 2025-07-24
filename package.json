@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
     "generate": "prisma generate",
     "build": "tsc && prisma generate",
-    "start": "node dist/main.js",
+    "start": "prisma generate && node dist/main.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:migrate:deploy": "prisma migrate deploy"
