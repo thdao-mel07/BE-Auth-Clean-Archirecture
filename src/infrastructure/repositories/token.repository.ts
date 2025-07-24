@@ -1,4 +1,7 @@
-import { PrismaClient } from "../../../generated/prisma";
+//localhost
+//import { PrismaClient } from "../../../generated/prisma";
+// production
+import { PrismaClient } from '@prisma/client';
 import { injectable } from "tsyringe";
 import { ITokenRepository } from "../../domain/repositories/token.repository";
 import { RefreshToken } from "../../domain/entities/token.entity";
