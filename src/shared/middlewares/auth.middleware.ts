@@ -16,7 +16,7 @@ declare global {
 export const authenticateJWT = (req: Request, res: Response, next: NextFunction) => {
   try {
     const authHeader = req.headers.authorization;
-    console.log('[JWT] Authorization Header:', authHeader); // 👈 debug log
+    console.log('[JWT] Authorization Header:', authHeader); //  debug log
 
     if (!authHeader) {
       return res.status(401).json({ error: 'No token provided' });
@@ -34,6 +34,7 @@ export const authenticateJWT = (req: Request, res: Response, next: NextFunction)
 
     req.user = payload;
     next();
+    return;
   } catch (error) {
     console.error('[JWT] Error:', error); //  debug log
     return res.status(401).json({ error: 'Invalid token' });

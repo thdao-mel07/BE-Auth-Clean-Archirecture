@@ -3,9 +3,9 @@ import { AppError } from '../errors/app-error';
 
 export const errorHandler = (
   err: Error,
-  req: Request,
+  _req: Request,
   res: Response,
-  next: NextFunction
+  _next: NextFunction
 ): void => {
   console.error(err);
 

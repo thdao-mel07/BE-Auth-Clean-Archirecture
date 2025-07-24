@@ -29,7 +29,7 @@ app.get('/reset-password', (req, res) => {
 app.use(errorHandler);
 
 // 404 handler
-app.use((req, res) => {
+app.use((_req, res) => {
   res.status(404).json({
     error: {
       name: 'NotFoundError',

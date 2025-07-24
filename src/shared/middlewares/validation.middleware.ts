@@ -12,7 +12,7 @@ export const validatePassword = (password: string): boolean => {
 
 export const validateAuthRequest = (
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): void => {
   try {
@@ -42,7 +42,7 @@ export const validateAuthRequest = (
   }
 };
 
-export const validateRefreshToken = (req: Request, res: Response, next: NextFunction): void => {
+export const validateRefreshToken = (req: Request, _res: Response, next: NextFunction): void => {
   try {
     console.log('[Validation] Body:', req.body); //  debug log
     const { refreshToken } = req.body;
@@ -61,7 +61,7 @@ export const validateRefreshToken = (req: Request, res: Response, next: NextFunc
 
 export const validateResetPassword = (
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): void => {
   try {
@@ -88,7 +88,7 @@ export const validateResetPassword = (
 
 export const validateForgotPassword = (
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): void => {
   try {
