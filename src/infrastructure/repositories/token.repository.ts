@@ -1,4 +1,5 @@
-import { PrismaClient } from "../../../generated/prisma";
+//import { PrismaClient } from "../../../generated/prisma";
+import { PrismaClient } from "@prisma/client";
 import { injectable } from "tsyringe";
 import { ITokenRepository } from "../../domain/repositories/token.repository";
 import { RefreshToken } from "../../domain/entities/token.entity";
